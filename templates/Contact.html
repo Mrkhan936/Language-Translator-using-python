@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>globeSpeak.com</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark-subtle ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GlobeSpeak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact us </a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login form goes here -->
+                    <form class="bs-secondary-bg">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Login</button>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h6 class="mb-0 me-2">Don't have an account?</h6>
+                            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#loginModal1">
+                                Create New
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal1" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="loginModalLabel">Login</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login form goes here -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="Full Name" class="form-label">Full Name:</label>
+                            <input type="text" class="form-control" id="username" name="Fullname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Confirm Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Submit</button>
+                        <!-- <div class="d-flex align-items-center justify-content-center">
+              <h6 class="mb-0 me-2">Don't have an account?</h6>
+              <button class="btn btn-outline-dark" data-bs-toggle="modal1" data-bs-target="#loginModal1">Create New</button>
+            </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-5">
+        <div class="row">
+            <h1 class="text-center p-3">Contact Us</h1>
+            <div class="col-lg-4">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                    class="bi bi-geo-alt-fill container d-flex align-items-center justify-content-center"
+                    viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                </svg>
+                <div class="text-center">
+                    <h4>Address</h4>
+                    <h6>GlobeSpeak Group Contracting</h6>
+                    <p>146 Yuma Street Denver CO 80223</p>
+
+                    <h6>Northern Division Office </h6>
+                    <p>1270 Automation Drive Windsor, CO 80550</p>
+                </div>
+
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                    class="bi bi-telephone-fill container d-flex align-items-center justify-content-center"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <div class="text-center">
+                    <h4>Phone</h4>
+                    <h6>GlobeSpeak Group Contracting</h6>
+                    <p>303.428.2011 phone</p>
+                    <p>303.202.0466 facsimile</p>
+
+                    <h6>GlobeSpeak 24/7 Service Departmen</h6>
+                    <p>303.428.2011</p>
+                    <p>(Then press 2 for emergency calls)</p>
+
+                    <h6>Northern Division Office</h6>
+                    <p>303.428.2011 phone</p>
+                    <p>303.202.0466 facsimile</p>
+                </div>
+
+            </div>
+            <div class="col-lg-4 align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                    class="bi bi-chat-left-dots-fill container d-flex align-items-center justify-content-center"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                </svg>
+                <div class="text-center">
+                    <h4>Email</h4>
+                    <h6>Request for proposal</h6>
+                    <p>info@globeSpeak.com</p>
+
+
+                    <h6>Electrical service calls</h6>
+                    <p>service@globeSpeakservice.com</p>
+
+                    <h6>Employment Opportunities</h6>
+                    <p>carrer@globeSpeakcontacting.com</p>
+                </div>>
+            </div>
+        </div><!-- /.row -->
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('translatorForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            fetch('/translate', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('translatedText').innerText = data.translatedText;
+                    } else {
+                        console.error(data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

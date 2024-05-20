@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>globeSpeak.com</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark-subtle ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GlobeSpeak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href=".{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('Contact') }}">Contact us </a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="loginModalLabel">Login</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login form goes here -->
+                    <form class="bs-secondary-bg">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Login</button>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h6 class="mb-0 me-2">Don't have an account?</h6>
+                            <button class="btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#loginModal1">Create
+                                New</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal1" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="loginModalLabel">Login</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login form goes here -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="Full Name" class="form-label">Full Name:</label>
+                            <input type="text" class="form-control" id="username" name="Fullname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Confirm Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Submit</button>
+                        <!-- <div class="d-flex align-items-center justify-content-center">
+              <h6 class="mb-0 me-2">Don't have an account?</h6>
+              <button class="btn btn-outline-dark" data-bs-toggle="modal1" data-bs-target="#loginModal1">Create New</button>
+            </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row featurette d-flex align-items-center justify-content-center m-3">
+            <div class="col-md-7">
+                <h1 class="featurette-heading fw-normal lh-1">Introduction<span
+                        class="text-body-secondary"></span>
+                </h1>
+                <p class="lead">"Welcome to GlobeSpeak, where language barriers disappear and communication becomes effortless. Our cutting-edge language translator is designed to provide accurate and reliable translations for a variety of languages. With a user-friendly interface and advanced features, we strive to make language translation seamless, fostering global connections and understanding. Join us in breaking down barriers and embracing the beauty of diverse communication."
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='img3.jpeg') }}" alt="Image not found">
+            </div>
+        </div>
+
+        <div class="row featurette d-flex align-items-center justify-content-center m-3">
+            <div class="col-md-7 order-md-2">
+                <h1 class="featurette-heading fw-normal lh-1"> Features. <span
+                        class="text-body-secondary"></span></h1>
+                <p class="lead">Our language translator ensures precise and reliable translations, maintaining the integrity of your messages.</p>
+                <p class="lead">A simple and intuitive interface designed for ease of use, making the translation process straightforward for all users.</p>
+                <p class="lead">Support for an extensive range of languages, allowing users to communicate effectively across diverse linguistic landscapes.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='img2.jpeg') }}" alt="Image not found">
+            </div>
+        </div>
+
+        <div class="row featurette d-flex align-items-center justify-content-center m-3">
+            <div class="col-md-7">
+                <h1 class="featurette-heading fw-normal lh-1">User Benefit. <span
+                        class="text-body-secondary"></span></h1>
+                <p class="lead">Break down language barriers and communicate effortlessly with people from different linguistic backgrounds.</p>
+                <p class="lead">Seamlessly switch between languages to adapt to diverse communication needs, whether it's in travel, business, or social interactions.</p>
+                <p class="lead">Trust in the privacy and security measures in place, ensuring that your translated messages are handled with the utmost confidentiality.</p>
+            </div>
+            <div class="col-md-5 order-md-2">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ url_for('static', filename='img1.webp') }}" alt="image not found">
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+         document.getElementById('translatorForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  var formData = new FormData(this);
+
+  fetch('/translate', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      document.getElementById('translatedText').innerText = data.translatedText;
+    } else {
+      console.error(data.error);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
+    </script>
+
+</body>
+
+</html>
